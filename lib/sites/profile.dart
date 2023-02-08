@@ -56,7 +56,7 @@ class _ProfilePageState extends State<ProfilePage> {
               height: 10,
             ),
             Container(
-              width: 150,
+              width: 220,
               decoration: BoxDecoration(
                 color: Colors.black,
                 borderRadius: BorderRadius.circular(30),
@@ -66,7 +66,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   Signup();
                 },
                 child: Text(
-                  'Edit Profile',
+                  'Profile bearbeiten',
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.white,
@@ -93,33 +93,13 @@ class _ProfilePageState extends State<ProfilePage> {
                       Text(
                         'Einstellungen',
                         style: TextStyle(
+                          color: Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
                         ),
                       ),
                       SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(
-                            color: Colors.grey.shade200,
-                          ),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.all(10),
-                          child: Column(
-                            children: <Widget>[
-                              // Add settings options here, e.g. toggle buttons or text fields
-                            ],
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
+                        height: 20,
                       ),
                       Text(
                         'Erfolge',
@@ -135,17 +115,12 @@ class _ProfilePageState extends State<ProfilePage> {
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          border: Border.all(
-                            color: Colors.grey.shade200,
-                          ),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Padding(
                           padding: EdgeInsets.all(10),
                           child: Column(
-                            children: <Widget>[
-                              // Add achievement options here, e.g. a list of achieved goals
-                            ],
+                            children: <Widget>[],
                           ),
                         ),
                       ),

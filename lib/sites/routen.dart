@@ -18,12 +18,21 @@ class _RoutesListState extends State<RoutesList> {
     return ListView.builder(
       itemCount: _routes.length,
       itemBuilder: (context, index) {
-        return Container(
-          color: Colors.white,
-          child: ListTile(
-            title: Text(_routes[index].name),
-            subtitle: Text(
-                'Schwierigkeit: ${_routes[index].difficulty} / Zeit: ${_routes[index].length} min'),
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white,
+            ),
+            onPressed: () {},
+            child: Container(
+              color: Colors.white,
+              child: ListTile(
+                title: Text(_routes[index].name),
+                subtitle: Text(
+                    'Schwierigkeit: ${_routes[index].difficulty} / Zeit: ${_routes[index].length} min'),
+              ),
+            ),
           ),
         );
       },
