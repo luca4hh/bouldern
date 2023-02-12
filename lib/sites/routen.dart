@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class RoutesList extends StatefulWidget {
@@ -19,18 +21,29 @@ class _RoutesListState extends State<RoutesList> {
       itemCount: _routes.length,
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          padding: EdgeInsets.all(10),
           child: ElevatedButton(
+            onHover: (value) {},
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
             ),
-            onPressed: () {},
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: SnackBarAction(
+                label: "Action",
+                onPressed: () {},
+              )));
+            },
             child: Container(
+              margin: EdgeInsets.symmetric(vertical: 10),
               color: Colors.white,
               child: ListTile(
-                title: Text(_routes[index].name),
+                title: Text(
+                  _routes[index].name,
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
                 subtitle: Text(
-                    'Schwierigkeit: ${_routes[index].difficulty} / Zeit: ${_routes[index].length} min'),
+                    'Schwierigkeit: ${_routes[index].difficulty} \nZeit: ${_routes[index].length} min'),
               ),
             ),
           ),
